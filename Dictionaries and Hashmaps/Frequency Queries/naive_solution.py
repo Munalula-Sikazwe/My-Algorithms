@@ -1,6 +1,4 @@
 from collections import defaultdict, Counter
-
-
 # Complete the freqQuery function below.
 def freqQuery(queries):
     output = []

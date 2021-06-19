@@ -6,4 +6,4 @@ def maximumToys(prices, k):
         if price < k:
             k -= price
             bought += 1
-    return bought 
+    return bought

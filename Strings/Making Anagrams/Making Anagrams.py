@@ -1,3 +1,4 @@
+from collections import defaultdict
 def makeAnagram(a, b):
     # Write your code here
     count = 0

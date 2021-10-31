@@ -13,3 +13,4 @@ def get_area(area):
     return result
 
 print(get_area(12))
+

@@ -11,3 +11,5 @@ def get_substrings(string):
             result += f",{substring}"
 
         return result[1:]
+
+print(get_substrings("abc"))

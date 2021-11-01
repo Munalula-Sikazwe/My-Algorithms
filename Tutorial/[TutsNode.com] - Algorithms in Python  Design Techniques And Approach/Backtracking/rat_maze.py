@@ -26,7 +26,7 @@ maze = [[1, 1, 0, 0],
         [1, 1, 0, 0],
         [0, 1, 1, 1]
         ]
-solution = [[0 for value in range(4)] for array in range(4)]
+solution = [[0 for _ in range(4)] for _ in range(4)]
 
 n = len(maze)
 

@@ -48,8 +48,8 @@ main_tree.left_node.right_node = Node(5)
 main_tree.right_node.left_node = Node(6)
 main_tree.right_node.right_node = Node(7)
 
-sub_tree = Node(3)
-sub_tree.left_node = Node(6)
-sub_tree.right_node = Node(7)
+sub_tree = Node(2)
+sub_tree.left_node = Node(4)
+sub_tree.right_node = Node(5)
 
 print(is_subtree(main_tree, sub_tree))

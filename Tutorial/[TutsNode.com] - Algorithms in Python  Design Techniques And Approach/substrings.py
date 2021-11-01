@@ -1,5 +1,5 @@
 def get_substrings(string):
-    if len(string) == 0 :
+    if len(string) == 0:
         return ""
     else:
         first_letter = string[0]
@@ -11,4 +11,3 @@ def get_substrings(string):
             result += f",{substring}"
 
         return result[1:]
-

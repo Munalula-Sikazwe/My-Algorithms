@@ -12,10 +12,25 @@ def solve_maze(maze, row, column, correct_path, n):
     if is_valid_square(maze, row, column, n):
         correct_path[row][column] = 1
 
-        if solve_maze(maze,row+1,column,correct_path,n):
+        if solve_maze(maze, row + 1, column, correct_path, n):
             return True
-        if solve_maze(maze,row,column+1,correct_path,n):
+        if solve_maze(maze, row, column + 1, correct_path, n):
             return True
         maze[row][column] = 0
         return False
     return False
+
+
+maze = [[1, 1, 0, 0],
+        [1, 1, 0, 1],
+        [1, 1, 0, 0],
+        [0, 1, 1, 1]
+        ]
+solution = [[0 for value in range(4)] for array in range(4)]
+
+n = len(maze)
+
+if solve_maze(maze, 0, 0, solution, n):
+    for i in solution:
+        for j in i:
+            print(j, end=' ')

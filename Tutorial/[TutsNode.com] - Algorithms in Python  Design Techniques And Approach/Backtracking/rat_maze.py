@@ -34,3 +34,4 @@ if solve_maze(maze, 0, 0, solution, n):
     for i in solution:
         for j in i:
             print(j, end=' ')
+        print()

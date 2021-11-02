@@ -44,8 +44,10 @@ def save_queens(board, col, size):
 board = [[0 for _ in range(5)] for _ in range(5)]
 size = len(board)
 
-if save_queens(board,0,size):
+if save_queens(board, 0, size):
     for i in board:
         for j in i:
             print(j, end=' ')
         print()
+else:
+    print("solution does not exist.")

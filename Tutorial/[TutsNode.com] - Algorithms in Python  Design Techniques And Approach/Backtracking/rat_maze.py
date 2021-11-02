@@ -21,16 +21,16 @@ def solve_maze(maze, row, column, correct_path, n):
     return False
 
 
-maze = [[1, 1, 0, 0],
-        [1, 1, 0, 1],
-        [1, 1, 0, 0],
-        [0, 1, 1, 1]
-        ]
+test_maze = [[1, 1, 0, 0],
+             [1, 1, 0, 1],
+             [1, 1, 0, 0],
+             [0, 1, 1, 1]
+             ]
 solution = [[0 for _ in range(4)] for _ in range(4)]
 
-n = len(maze)
+n = len(test_maze)
 
-if solve_maze(maze, 0, 0, solution, n):
+if solve_maze(test_maze, 0, 0, solution, n):
     for i in solution:
         for j in i:
             print(j, end=' ')

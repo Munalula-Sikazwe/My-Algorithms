@@ -23,3 +23,4 @@ def is_safe_square(board, row, col, size):
     for rank, file in zip(range(row, size), range(col, -1, -1)):
         if board[rank][file] == 1:
             return False
+    return True

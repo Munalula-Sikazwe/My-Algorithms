@@ -7,11 +7,13 @@ path_y = [1, 2, 2, 1, -1, -2, -2, -1]
 def valid_move(board, row, column, n):
     if 0 <= row < n and 0 <= column < n and board[row][column] == -1:
         return True
+
     return False
 
 
 def knight_tour(board, step, row=0, column=0, n=8):
-    if step == n ** 2:
+    if step == (n ** 2):
+        print("reached edge case.")
         return True
 
     for index in range(n):
@@ -20,8 +22,11 @@ def knight_tour(board, step, row=0, column=0, n=8):
         if valid_move(board, row_new, column_new, n):
             board[row_new][column_new] = step
             if knight_tour(board, row, column, step + 1, n):
+                print(f"success:{row},{column}")
                 return True
+
             board[row_new][column_new] = -1
+
     return False
 
 

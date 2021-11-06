@@ -18,9 +18,8 @@ def knight_tour(board, step, board_size, row=0, column=0, n=8):
         row_new = row + path_x[index]
         column_new = column + path_y[index]
         if valid_move(board, row_new, column_new, n=board_size):
-            print("Valid Move")
             board[row_new][column_new] = step
-            if knight_tour(board, step + 1, board_size=board_size, row=row_new, column=column_new):
+            if knight_tour(board, step + 1, board_size, row=row_new, column=column_new):
                 return True
 
             board[row_new][column_new] = -1

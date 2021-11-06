@@ -1,4 +1,4 @@
-board_size = 5
+board_size = 8
 
 
 def valid_move(board, row, column, n):

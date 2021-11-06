@@ -28,9 +28,9 @@ def knight_tour(board, step, board_size, row=0, column=0, n=8):
 
 
 board = [[-1 for _ in range(board_size)] for _ in range(board_size)]
-board[1][1] = 0
+board[0][0] = 0
 step = 1
-if knight_tour(board, step, board_size, row=1, column=1):
+if knight_tour(board, step, board_size, row=0, column=0):
     for i in range(board_size):
         for j in range(board_size):
             print(board[i][j], end=' ')

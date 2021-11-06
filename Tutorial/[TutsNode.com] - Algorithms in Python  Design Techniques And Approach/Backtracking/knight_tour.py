@@ -1,7 +1,6 @@
-global path_x, path_y, n
+
 n = 8
-path_x = [2, 1, -1, -2, -2, -1, 1, 2]
-path_y = [1, 2, 2, 1, -1, -2, -2, -1]
+
 
 
 def valid_move(board, row, column, n):
@@ -12,6 +11,8 @@ def valid_move(board, row, column, n):
 
 
 def knight_tour(board, step, row=0, column=0, n=8):
+    path_x = [2, 1, -1, -2, -2, -1, 1, 2]
+    path_y = [1, 2, 2, 1, -1, -2, -2, -1]
     if step == (n ** 2):
         print("reached edge case.")
         return True
@@ -21,7 +22,7 @@ def knight_tour(board, step, row=0, column=0, n=8):
         column_new = column + path_y[index]
         if valid_move(board, row_new, column_new, n):
             board[row_new][column_new] = step
-            if knight_tour(board, row, column, step + 1, n):
+            if knight_tour(board, step + 1, row=row_new, column=column_new, n=n):
                 print(f"success:{row},{column}")
                 return True
 
@@ -31,12 +32,16 @@ def knight_tour(board, step, row=0, column=0, n=8):
 
 
 board = [[-1 for _ in range(n)] for _ in range(n)]
-board[0][0] = 0
+board[1][1] = 0
 step = 1
-if knight_tour(board, step):
+if knight_tour(board, step, row=1, column=1):
     for i in range(n):
         for j in range(n):
             print(board[i][j], end=' ')
-    print()
+        print()
 else:
+    for i in range(n):
+        for j in range(n):
+            print(board[i][j], end=' ')
+        print()
     print("Solution for this position does not exist.")

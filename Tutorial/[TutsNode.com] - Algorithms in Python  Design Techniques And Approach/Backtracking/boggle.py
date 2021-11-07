@@ -33,4 +33,4 @@ visited = [[0 for _ in range(len(boogle))] for _ in range(len(boogle))]
 
 for i in range(row_index):
     for j in range(column_index):
-        find_words(boogle, visited, row_index, column_index, '')
+        find_words(boogle, visited, i, j, '')

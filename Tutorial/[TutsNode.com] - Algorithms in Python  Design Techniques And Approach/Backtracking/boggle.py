@@ -23,3 +23,14 @@ def find_words(boggle, visited, row_index_param, column_index_param, word):
 
     visited[row_index_param][column_index_param] = 0
 
+
+boogle = [['T', 'Y', 'R', 'S'],
+          ['N', 'U', 'A', 'K'],
+          ['Z', 'F', 'E', 'O'],
+          ['A', 'C', 'B', 'O']]
+
+visited = [[0 for _ in range(len(boogle))] for _ in range(len(boogle))]
+
+for i in range(row_index):
+    for j in range(column_index):
+        find_words(boogle, visited, row_index, column_index, '')

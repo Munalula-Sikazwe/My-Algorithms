@@ -5,7 +5,7 @@ column_index = 4
 
 
 def is_valid_cell(row, column, visited):
-    if 0 <= row < row_index and 0 <= column < column_index and visited[row, column] == 0:
+    if 0 <= row < row_index and 0 <= column < column_index and visited[row] [column] == 0:
         return True
     return False
 

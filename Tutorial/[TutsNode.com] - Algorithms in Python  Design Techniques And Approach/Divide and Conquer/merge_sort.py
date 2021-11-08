@@ -5,7 +5,7 @@ def merge(leftside, rightside, arr):
     length_of_rightside = len(rightside)
 
     while 0 <= i < length_of_leftside and 0 <= j < length_of_rightside:
-        if leftside[i] < rightside[j]:
+        if leftside[i] < rightside[j] or leftside[i] == rightside[j]:
             arr.append(leftside[i])
             i += 1
         else:
@@ -33,11 +33,9 @@ def merge_sort(arr):
 
     leftside = merge_sort(leftside)
     rightside = merge_sort(rightside)
-    print(leftside)
-    print(rightside)
     merge(leftside, rightside, sorted_arr)
 
     return sorted_arr
 
 
-print(merge_sort([2, 4, 3]))
+print(merge_sort([2, 4, 3, 3]))

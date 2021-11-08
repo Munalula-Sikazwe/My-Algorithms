@@ -18,3 +18,7 @@ def merge(leftside, rightside, arr):
     while i < length_of_rightside:
         arr.append(rightside[j])
         j += 1
+
+
+def merge_sort(arr):
+   length_of_array = len(arr)

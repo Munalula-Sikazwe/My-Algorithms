@@ -21,9 +21,19 @@ def merge(leftside, rightside, arr):
 
 
 def merge_sort(arr):
+    sorted_arr = []
     length_of_array = len(arr)
     if length_of_array == 1:
         return arr
     middle_value = length_of_array // 2
 
+    leftside = arr[:middle_value]
+    rightside = arr[middle_value:]
 
+    merge_sort(leftside)
+    merge_sort(rightside)
+    merge(leftside,rightside,sorted_arr)
+
+    return sorted_arr
+
+print(merge_sort([2,4,3]))

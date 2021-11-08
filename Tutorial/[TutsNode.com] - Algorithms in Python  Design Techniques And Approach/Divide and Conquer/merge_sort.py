@@ -22,5 +22,8 @@ def merge(leftside, rightside, arr):
 
 def merge_sort(arr):
     length_of_array = len(arr)
-    if length_of_array > 1:
-        middle_value = length_of_array // 2
+    if length_of_array == 1:
+        return arr
+    middle_value = length_of_array // 2
+
+

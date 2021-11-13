@@ -7,10 +7,11 @@ def partition(arr, lb, ub):
 
         while arr[left] <= pivot and left < len(arr) - 1:
             left += 1
-        while arr[right] >= pivot and right > 0:
-            right += 1
+        while arr[right] > pivot and right > 0:
+            right -= 1
 
         while left < right:
+            print("swapping")
             arr[right], arr[left] = arr[left], arr[right]
 
     arr[lb], arr[right] = arr[right], arr[lb]

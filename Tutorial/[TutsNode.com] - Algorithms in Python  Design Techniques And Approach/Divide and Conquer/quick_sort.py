@@ -11,8 +11,6 @@ def partition(arr, lb, ub):
             right -= 1
 
         if left < right:
-            print("swapping")
-
             arr[right], arr[left] = arr[left], arr[right]
 
     arr[lb], arr[right] = arr[right], arr[lb]

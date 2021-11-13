@@ -17,3 +17,9 @@ def partition(arr, lb, ub):
 
     return right
 
+
+def quick_sort(arr, lb, ub):
+    if lb < ub:
+        index = partition(arr, lb, ub)
+        quick_sort(arr, lb, index - 1)
+        quick_sort(arr, index + 1, ub)

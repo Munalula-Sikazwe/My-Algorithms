@@ -23,3 +23,10 @@ def quick_sort(arr, lb, ub):
         index = partition(arr, lb, ub)
         quick_sort(arr, lb, index - 1)
         quick_sort(arr, index + 1, ub)
+
+
+arr = [10, 1, 67, 20, 56, 34, 43, 90, 54, 8, 0]
+upper_bound = len(arr) - 1
+quick_sort(arr, 0, upper_bound)
+
+print(arr)

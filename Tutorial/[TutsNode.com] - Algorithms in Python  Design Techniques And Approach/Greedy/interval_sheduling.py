@@ -24,6 +24,7 @@ def interval_sheduling(intervals):
 
     return optimal_intervals
 
+print(interval_sheduling(intervals))
 
 
 
